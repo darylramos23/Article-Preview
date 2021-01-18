@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+}
+.container {
+  background-color: hsl(210, 46%, 95%);
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px 1px hsla(212, 23%, 69%, 0.151);
+}
+.drawers-image {
+  width: 38%;
+  height: 300px;
+  background-image: url("drawers.jpg");
+  background-position: bottom left;
+  background-size: cover;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.texts-container {
+  padding: 3.5em;
+}
+.bolded-texts {
+  font-size: 1.7em;
+  line-height: 1.2em;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+.small-texts {
+  margin-top: 1.5em;
+  font-size: 1.1em;
+  color: hsl(214, 17%, 51%);
+  line-height: 1.3em;
+}
+.user {
+  margin-top: 1.2em;
+  display: flex;
+  align-items: center;
+}
+.user-image {
+  border-radius: 50%;
+  height: 50px;
+}
+.user-information {
+  margin-left: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+.user-information span {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+.user-information span + span {
+  /* date*/
+  color: hsl(212, 23%, 69%);
+}
+.share-container {
+  margin-left: auto;
+  position: relative;
+}
+.share-icon-container {
+  width: 2.5em;
+  height: 2.5em;
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+.share-icon-container:hover {
+  background-color: hsl(217, 19%, 35%);
+}
+.share-icon-container:hover .share-icon {
+  filter: brightness(100);
+}
+
+.share-icon {
+  width: 1.2em;
+}
+
+.links {
+  color: white;
+  background-color: hsl(217, 19%, 35%);
+  position: absolute;
+  transform: translate(-45%, -210%);
+  border-radius: 10px;
+}
+.links::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: rotate(45deg) translate(100%, -30%);
+  width: 15px;
+  height: 15px;
+  background-color: hsl(217, 19%, 35%);
+}
+.links-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em 2em;
+}
+.links img {
+  margin: 10px;
+}
+.links p {
+  color: hsl(212, 23%, 69%);
+  margin-left: 10px;
+  letter-spacing: 0.4em;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 300px;
+    height: 460px;
+    flex-direction: column;
+  }
+  .drawers-image {
+    width: 300px;
+    height: 38%;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  .texts {
+    padding-top: 3em;
+    width: 80%;
+  }
+  .texts-container {
+    padding: 0em;
+  }
+  .bolded-texts {
+    line-height: 1.5em;
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  .small-texts {
+    line-height: 1.5em;
+    font-size: 0.94em;
+    margin-top: 1.4em;
+  }
+  .user-image {
+    border-radius: 50%;
+    height: 45px;
+  }
+  .user-information {
+    margin-left: 1.5em;
+    display: flex;
+    flex-direction: column;
+  }
+  .user-information span {
+    font-size: 0.9em;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+  }
+  .user-information span + span {
+    /* date*/
+    color: hsl(212, 23%, 69%);
+  }
+
+  .share-icon-container {
+    position: relative;
+    z-index: 20;
+  }
+  .share-icon-container:hover {
+  }
+  .share-icon-container:hover .share-icon {
+    filter: none;
+  }
+
+  .share-icon {
+    z-index: 2;
+    width: 1.2em;
+  }
+
+  .links {
+    color: white;
+    position: absolute;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    left: -102px;
+    bottom: -175px;
+    width: 300px;
+  }
+  .links::after {
+    display: none;
+  }
+
+  .links-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.5em 2em;
+  }
+  .links img {
+    padding: 9px 0 10px 0;
+    margin: 10px;
+  }
+  .links p {
+    color: hsl(212, 23%, 69%);
+    margin-left: 10px;
+    letter-spacing: 0.4em;
+  }
+}
